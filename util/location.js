@@ -1,4 +1,4 @@
-const GOOGLE_API_KEY = 'AIzaSyD2mP_sDlloOcwv6OLmYtATOJIcnDhcZcg';
+const GOOGLE_API_KEY = 'AIzaSyCBypvuvtRS7wmomoiPqmbP5Y5ps-mJXPk';
 
 export function getMapPreview(lat, lng) {
   const imagePreviewUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=14&size=400x200&maptype=roadmap&markers=color:red%7Clabel:S%7C${lat},${lng}&key=${GOOGLE_API_KEY}`;
@@ -14,6 +14,7 @@ export async function getAddress(lat, lng) {
   }
 
   const data = await response.json();
+  console.log('data ', data)
   const address = data.results[0].formatted_address;
   return address;
 }

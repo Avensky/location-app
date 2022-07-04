@@ -3,7 +3,7 @@ import { ScrollView, Image, View, Text, StyleSheet } from 'react-native';
 
 import OutlinedButton from '../components/UI/OutlinedButton';
 import { Colors } from '../constants/colors';
-import { fetchPlaceDetails } from '../util/database';
+//import { fetchPlaceDetails } from '../util/database';
 
 function PlaceDetails({ route, navigation }) {
   const [fetchedPlace, setFetchedPlace] = useState();
